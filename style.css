@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: hallowen;
+    user-select: none;
+}
+
+@font-face {
+    font-family: hallowen;
+    src: url(fonts/hall.otf)
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 1800px;
+    height: 750px;
+    background: url(img/home.jpg) repeat-x 100% 0 / cover;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.1) inset, -2px -5px 10px rgba(0, 0, 0, 0.25) inset, 15px 15px 10px rgba(0, 0, 0, 0.1), 10px 15px 15px rgba(0, 0, 0, 0.20);
+    animation: back 2s linear infinite;
+}
+
+@keyframes back {
+    to {
+        background-position-x: 0% 100%
+    }
+}
+
+.detail {
+    width: 60px;
+    height: 60px;
+    background-size: contain !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    position: absolute;
+    top: 0
+}
+
+.content {
+    width: 200px;
+    height: 200px;
+    background: url(https://img1.liveinternet.ru/images/attach/c/5/85/541/85541931_baba_yaga.gif);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 570px;
+    left: 0;
+    z-index: 2;
+    filter: drop-shadow(10px 4px 1px rgba(0, 0, 0, 0.67)) drop-shadow(15px 7px 23px rgba(0, 0, 0, 0.67))
+}
+
+
+.ground {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: beige;
+    width: 100%;
+    height: 100px;
+}
+
+.menu {
+    width: 150px;
+    background: #234068;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.61)
+}
+
+.menu-item {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    background: #234068;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    border: 1px dashed white;
+    padding: 5px 0;
+    color: white;
+}
+
+.menu-item > img {
+    width: 30%;
+}
+
+.hearth {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    padding: 10px 0;
+    border: 1px dashed white
+}
+
+.hearth > img {
+    width: 25%;
+    transition: .5s
+}
+
+.new-game-container {
+    width: 100%;
+    height: 100vh;
+    background: #082734;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:1rem;
+}
+
+.menu-cont {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 55;
+}
+
+.menu-container {
+    width: 100%;
+    height: 100%;
+    background: red;
+    background: url(https://bla-bla.live/hallo/happyhalloween-house.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 1;
+    transition: 2s ease-out;
+    transition-delay: calc(var(--i) * .1s)
+}
+.result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+    font-size: 30px;
+    color: white;
+}
+
+.result > img {
+    width: 20%;
+}
+.menu-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:2rem;
+    width: 500px;
+    height: 300px;
+    background: rgba(0, 0, 0, 0.21);
+    backdrop-filter: blur(5px);
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.2) inset, -2px -5px 10px rgba(0, 0, 0, 0.23) inset, 10px 15px 15px rgba(0, 0, 0, 0.1), 15px 10px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+}
+h1 {
+    color: white;
+    font-size: 15px;
+    font-family: sans-serif;
+    text-shadow: 0 0 3px black, 0 0 5px black, 0 0 10px black;
+}
+.menu-info > button,
+.new-game {
+    width: 200px;
+    height: 50px;
+    background: #bf3200;
+    color: white;
+    border: none;
+    border: 3px dashed white;
+    box-shadow: 9px 11px 10px rgb(0 0 0 / 25%), 0 0 3px 1px black inset;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 1s;
+    font-size: 25px;
+    position: relative
+}
+
+.menu-info p {
+    color: white
+}
+
+.game-position {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50%;
+}
+
+.game-position > button {
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    transition: .4s;
+    border: none;
+}
+
+
+.game-position > button:hover {
+    background: orangered;
+    color: white;
+}
+
+.menu-info > button::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, red, orangered, orange, darkorange);
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    opacity: 0.2;
+    animation: frame 2s linear infinite;
+}
+
+@keyframes frame {
+    to {
+        filter: hue-rotate(360deg)
+    }
+}
+
+.slideUp {
+    transform-origin: top;
+    transform: rotate(10deg) scale(0.9)
+}
+
